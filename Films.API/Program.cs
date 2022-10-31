@@ -60,6 +60,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
     };
 });
 
+builder.Services.AddScoped<IRabbitMqService, RabbitMQManager>();
 builder.Services.AddScoped<IAuthorizeService, AuthorizeManager>();
 builder.Services.AddScoped<IFilmDal, EfFilmDal>();
 builder.Services.AddScoped<IFilmService, FilmManager>();
